@@ -1,10 +1,15 @@
 package com.yh.chartbuilder;
 
-import org.achartengine.ChartFactory;
+import java.io.File;
+import java.io.FileOutputStream;
+
 import org.achartengine.GraphicalView;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.Bitmap.CompressFormat;
+import android.os.Bundle;
+import android.os.Environment;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
@@ -62,6 +67,19 @@ public class MainXYChart extends Activity{
 	
 	public void changePoints(View v){
 		
+	}
+	
+	public void saveBitmap(){
+		Bitmap bitmap = mChart.toBitmap();
+	    try {
+	    	File file = new File(Environment.getExternalStorageDirectory(),
+	    			"test.png");
+	    	FileOutputStream output = new FileOutputStream(file);
+	    	bitmap.compress(CompressFormat.PNG, 100, output);
+
+	    } catch (Exception e) {
+	    	e.printStackTrace();
+	    }
 	}
 
 
