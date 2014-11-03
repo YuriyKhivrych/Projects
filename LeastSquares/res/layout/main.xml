@@ -29,7 +29,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="@string/x_value"
-            android:inputType="numberDecimal">
+            android:inputType="numberDecimal" >
 
             <requestFocus />
         </EditText>
@@ -41,27 +41,36 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="@string/y_value"
-            android:inputType="numberDecimal"/>
-
+            android:inputType="numberDecimal" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editLayout"
         android:orientation="vertical" >
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/btnAdd"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/add_point" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnChange"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/change_points" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chart_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
 
     </LinearLayout>
 
