@@ -55,13 +55,15 @@
             android:id="@+id/btnAdd"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/add_point" />
+            android:text="@string/add_point"
+            android:onClick="addPoint" />
 
         <Button
             android:id="@+id/btnChange"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/change_points" />
+            android:text="@string/change_points"
+            android:onClick="changePoints" />
     </LinearLayout>
 
     <LinearLayout

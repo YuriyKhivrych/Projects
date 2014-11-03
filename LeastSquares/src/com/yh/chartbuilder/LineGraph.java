@@ -34,7 +34,7 @@ public class LineGraph {
 		
 		
 		//Customize line 1
-		renderer.setColor(Color.WHITE);
+		renderer.setColor(Color.BLACK);
 		renderer.setPointStyle(PointStyle.CIRCLE);
 		renderer.setFillPoints(true);	
 		

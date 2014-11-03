@@ -7,14 +7,14 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
-public class MainXYChart extends Activity implements OnClickListener {
+public class MainXYChart extends Activity{
 
-	Button btnAdd;
-	Button btnChange;
+	EditText xValue;
+	EditText yValue;
 	
 	private static GraphicalView mChart;
 	private LineGraph lineGraph = new LineGraph();
@@ -25,12 +25,8 @@ public class MainXYChart extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		
-		btnAdd = (Button) findViewById(R.id.btnAdd);
-		btnChange = (Button) findViewById(R.id.btnChange);
-		
-		btnAdd.setOnClickListener(this);
-		btnChange.setOnClickListener(this);
-		
+		xValue = (EditText) findViewById(R.id.editXValue);
+		yValue = (EditText) findViewById(R.id.editYValue);
 		
 		// Getting a reference to LinearLayout of the MainActivity Layout
 	  	LinearLayout chartContainer = (LinearLayout) findViewById(R.id.chart_container);
@@ -48,20 +44,25 @@ public class MainXYChart extends Activity implements OnClickListener {
 		return true;
 	}
 
-	@Override
-	public void onClick(View v) {
-		// TODO Auto-generated method stub
-		switch(v.getId()){
-			case(R.id.btnAdd):
-				
-				
-				break;
+	
+	public void addPoint(View v){
+		
+		try{
 			
-				
+			Point p = new Point(Double.parseDouble(xValue.getText().toString()),
+					Double.parseDouble(yValue.getText().toString()));
+			lineGraph.addNewPoint(p);
+		
+		}catch(Exception e){
+			Toast.makeText(getBaseContext(), "Type decimal values", Toast.LENGTH_LONG).show();
 		}
 		
-		
+		mChart.repaint();
+	}
+	
+	public void changePoints(View v){
 		
 	}
+
 
 }
