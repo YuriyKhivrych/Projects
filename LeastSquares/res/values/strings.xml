@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Least squares</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="x_value">X value</string>
+    <string name="y_value">Y value</string>
+    
+    <string name="add_point">Add</string>
+    <string name="change_points">Change points</string>
+
+</resources>
