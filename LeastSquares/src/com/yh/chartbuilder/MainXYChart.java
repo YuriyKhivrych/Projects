@@ -6,11 +6,13 @@ import java.io.FileOutputStream;
 import org.achartengine.GraphicalView;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -22,7 +24,7 @@ public class MainXYChart extends Activity{
 	EditText yValue;
 	
 	private static GraphicalView mChart;
-	private LineGraph lineGraph = new LineGraph();
+	private LineGraph lineGraph;
 	
 	
 	@Override
@@ -32,6 +34,8 @@ public class MainXYChart extends Activity{
 		
 		xValue = (EditText) findViewById(R.id.editXValue);
 		yValue = (EditText) findViewById(R.id.editYValue);
+		
+		lineGraph = new LineGraph();
 		
 		// Getting a reference to LinearLayout of the MainActivity Layout
 	  	LinearLayout chartContainer = (LinearLayout) findViewById(R.id.chart_container);
@@ -48,8 +52,33 @@ public class MainXYChart extends Activity{
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
 	
+	
+	public boolean onOptionsItemSelected(MenuItem item) {
+	      // TODO Auto-generated method stub
+	      switch(item.getItemId()){
+	      	case R.id.settings_menu_item:
+	      		startActivity(new Intent(MainXYChart.this, SettingsActivity.class));
+	      		break;
+	      		
+	      	case R.id.help_menu_item:
+	      		startActivity(new Intent(MainXYChart.this, HelpActivity.class));
+	      		break;
+	      		
+	      	case R.id.save_menu_item:
+	      		
+	      		break;
+	      	case R.id.load_menu_item:
+	      		
+	      		break;
+	      }
+	      return super.onOptionsItemSelected(item);
+	    }
+
+	/**
+	 * @param v
+	 * Adding new point to chart series
+	 */
 	public void addPoint(View v){
 		
 		try{
@@ -65,9 +94,6 @@ public class MainXYChart extends Activity{
 		mChart.repaint();
 	}
 	
-	public void changePoints(View v){
-		
-	}
 	
 	public void saveBitmap(){
 		Bitmap bitmap = mChart.toBitmap();
