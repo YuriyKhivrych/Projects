@@ -25,6 +25,7 @@
         </activity>
         <activity android:name="SettingsActivity"></activity>
         <activity android:name="HelpActivity"></activity>
+        <activity android:name="SaveActivity" android:theme="@android:style/Theme.Dialog"></activity>
     </application>
 
 </manifest>

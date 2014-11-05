@@ -23,7 +23,7 @@ public class MainXYChart extends Activity{
 	EditText xValue;
 	EditText yValue;
 	
-	private static GraphicalView mChart;
+	private static GraphicalView chartView;
 	private LineGraph lineGraph;
 	
 	
@@ -40,10 +40,10 @@ public class MainXYChart extends Activity{
 		// Getting a reference to LinearLayout of the MainActivity Layout
 	  	LinearLayout chartContainer = (LinearLayout) findViewById(R.id.chart_container);
 	  	
-	  	mChart = lineGraph.getView(this);
+	  	chartView = lineGraph.getView(this);
 	  	
 	 	// Adding the Line Chart to the LinearLayout
-	  	chartContainer.addView(mChart);
+	  	chartContainer.addView(chartView);
 	}
 
 	@Override
@@ -66,8 +66,9 @@ public class MainXYChart extends Activity{
 	      		break;
 	      		
 	      	case R.id.save_menu_item:
-	      		
+	      		startActivity(new Intent(this, SaveActivity.class));
 	      		break;
+	      		
 	      	case R.id.load_menu_item:
 	      		
 	      		break;
@@ -91,12 +92,12 @@ public class MainXYChart extends Activity{
 			Toast.makeText(getBaseContext(), "Type decimal values", Toast.LENGTH_LONG).show();
 		}
 		
-		mChart.repaint();
+		chartView.repaint();
 	}
 	
 	
 	public void saveBitmap(){
-		Bitmap bitmap = mChart.toBitmap();
+		Bitmap bitmap = chartView.toBitmap();
 	    try {
 	    	File file = new File(Environment.getExternalStorageDirectory(),
 	    			"test.png");
