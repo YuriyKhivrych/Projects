@@ -8,7 +8,7 @@ import org.achartengine.GraphicalView;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.os.Bundle;
@@ -21,7 +21,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-public class MainXYChart extends Activity{
+public class MainXYChart extends Activity implements OnSharedPreferenceChangeListener{
 	
 	SharedPreferences sharedPrefs;
 
@@ -53,7 +53,8 @@ public class MainXYChart extends Activity{
 	  	// get SharedPreferences, which works with settings file
 	  	sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 	    // full clear of prefs
-	    // sharedPrefs.edit().clear().commit();
+	    sharedPrefs.edit().clear().commit();
+	  	sharedPrefs.registerOnSharedPreferenceChangeListener(this);
 	  	
 	}
 	
@@ -64,6 +65,16 @@ public class MainXYChart extends Activity{
 		super.onResume();
 	}
 
+	
+
+	@Override
+	public void onSharedPreferenceChanged(
+			SharedPreferences sharedPreferences, String key) {
+				// TODO Auto-generated method stub
+				lineGraph.rebuild(sharedPreferences);
+				chartView.repaint();
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

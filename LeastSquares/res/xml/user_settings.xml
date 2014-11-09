@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >    <PreferenceCategory android:title="Chart settings">
-        <SwitchPreference android:title="Zoom" android:key="zoom"/>
-        <ListPreference android:entries="@array/ls_entry" android:title="Line size" android:entryValues="@array/ls_values" android:key="line_size"/>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >    
+    <PreferenceCategory android:title="Chart settings">
+        <SwitchPreference 
+            android:title="Zoom" 
+            android:key="zoom"/>
+        
+        <ListPreference 
+            android:entries="@array/ls_entry" 
+            android:title="Line size" 
+            android:entryValues="@array/ls_values" 
+            android:key="line_size"/>
+        
+        <ListPreference 
+            android:entries="@array/color_entry" 
+            android:title="Line color" 
+            android:entryValues="@array/color_values" 
+            android:key="color"/>
+        <ListPreference android:entries="@array/pstyle_entry" android:title="Points Style" android:entryValues="@array/pstyle_values" android:key="point_style"/>
     </PreferenceCategory>
 
 </PreferenceScreen>

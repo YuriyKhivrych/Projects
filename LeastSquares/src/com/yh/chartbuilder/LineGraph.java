@@ -11,6 +11,7 @@ import org.achartengine.renderer.XYMultipleSeriesRenderer;
 import org.achartengine.renderer.XYSeriesRenderer;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 
 
@@ -77,6 +78,23 @@ public class LineGraph {
 	public Map<Double, Double> saveSeries(){
 		 return dataset.getRange(dataset.getMinX(),
 				dataset.getMaxX(), true);
+	}
+	
+	
+	public void rebuild(SharedPreferences sharedPreferences){
+		
+		Boolean isZoomVisible = sharedPreferences.getBoolean("zoom", true);
+		Float lineWidth = Float.parseFloat(sharedPreferences.getString("line_size", "3"));
+		int lineColor = Color.parseColor(sharedPreferences.getString("color", "black"));
+		int psIndex = Integer.parseInt(sharedPreferences.getString("point_style", "0"));
+		
+		PointStyle pStyle[] = {PointStyle.CIRCLE, PointStyle.DIAMOND, PointStyle.POINT,
+				PointStyle.SQUARE, PointStyle.TRIANGLE, PointStyle.X};
+		
+		mRenderer.setZoomButtonsVisible(isZoomVisible);
+		renderer.setLineWidth(lineWidth);
+		renderer.setColor(lineColor);
+		renderer.setPointStyle(pStyle[psIndex]);
 	}
 	
 }

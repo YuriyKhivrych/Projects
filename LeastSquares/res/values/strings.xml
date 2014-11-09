@@ -20,8 +20,49 @@
     
     <string-array name="ls_values">
         <item>1</item>
+        <item>5</item>
+        <item>8</item>
+    </string-array>
+    
+    <string-array name="color_entry">
+        <item>black</item>
+        <item>red</item>
+        <item>green</item>
+        <item>blue</item>
+        <item>yellow</item>
+        <item>cyan</item>
+        <item>grey</item>
+        <item>magenta</item> 
+    </string-array>
+    
+    <string-array name="color_values">
+        <item>black</item>
+        <item>red</item>
+        <item>green</item>
+        <item>blue</item>
+        <item>yellow</item>
+        <item>cyan</item>
+        <item>grey</item>
+        <item>magenta</item>     
+    </string-array>
+    
+    
+    <string-array name="pstyle_entry">
+        <item>Sircle</item>
+        <item>Diamond</item>
+        <item>Point</item>
+        <item>Square</item>
+        <item>Triangle</item>
+        <item>X</item>
+    </string-array>
+    
+    <string-array name="pstyle_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
         <item>3</item>
-        <item >6</item>
+        <item>4</item>
+        <item>5</item>
     </string-array>
 
 </resources>
