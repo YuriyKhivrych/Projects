@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
@@ -73,6 +74,7 @@ public class MainXYChart extends Activity implements OnSharedPreferenceChangeLis
 				// TODO Auto-generated method stub
 				lineGraph.rebuild(sharedPreferences);
 				chartView.repaint();
+				
 	}
 	
 	@Override
