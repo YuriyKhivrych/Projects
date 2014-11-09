@@ -7,10 +7,13 @@ import org.achartengine.GraphicalView;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.os.Bundle;
 import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +22,8 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class MainXYChart extends Activity{
+	
+	SharedPreferences sharedPrefs;
 
 	EditText xValue;
 	EditText yValue;
@@ -44,6 +49,19 @@ public class MainXYChart extends Activity{
 	  	
 	 	// Adding the Line Chart to the LinearLayout
 	  	chartContainer.addView(chartView);
+	  	
+	  	// get SharedPreferences, which works with settings file
+	  	sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+	    // full clear of prefs
+	    // sharedPrefs.edit().clear().commit();
+	  	
+	}
+	
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		
+		super.onResume();
 	}
 
 	@Override
@@ -58,7 +76,7 @@ public class MainXYChart extends Activity{
 	      // TODO Auto-generated method stub
 	      switch(item.getItemId()){
 	      	case R.id.settings_menu_item:
-	      		startActivity(new Intent(MainXYChart.this, SettingsActivity.class));
+	      		startActivity(new Intent(MainXYChart.this, MyPreferenceActivity.class));
 	      		break;
 	      		
 	      	case R.id.help_menu_item:

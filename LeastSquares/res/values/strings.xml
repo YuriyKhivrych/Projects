@@ -11,5 +11,17 @@
     <string name="menu_item_help">Help</string>
     <string name="menu_item_save">Save</string>
     <string name="menu_item_load">Load</string>
+    
+    <string-array name="ls_entry">
+        <item>small</item>
+        <item>medium</item>
+        <item>big</item>
+    </string-array>
+    
+    <string-array name="ls_values">
+        <item>1</item>
+        <item>3</item>
+        <item >6</item>
+    </string-array>
 
 </resources>

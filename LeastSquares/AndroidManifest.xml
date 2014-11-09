@@ -5,8 +5,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="18" />
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
@@ -23,7 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="SettingsActivity"></activity>
+        <activity android:name="MyPreferenceActivity"></activity>
         <activity android:name="HelpActivity"></activity>
         <activity android:name="SaveActivity" android:theme="@android:style/Theme.Dialog"></activity>
     </application>
