@@ -83,7 +83,7 @@ public class LineGraph {
 	 * Returns SortedMap of all graph points
 	 * @return SortedMap<Double, Double>
 	 */
-	public Map<Double, Double> saveSeries(){
+	public Map<Double, Double> getSeries(){
 		 return dataset.getRange(dataset.getMinX(),
 				dataset.getMaxX(), true);
 	}
