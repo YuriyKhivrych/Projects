@@ -32,6 +32,7 @@ public class MainXYChart extends Activity implements OnSharedPreferenceChangeLis
 	
 	SharedPreferences sharedPrefs;
 
+    //test
 	//fields to get coordinates of points
 	EditText xValue;
 	EditText yValue;
