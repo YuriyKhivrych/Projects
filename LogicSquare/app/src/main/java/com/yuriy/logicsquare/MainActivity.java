@@ -54,7 +54,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
     private void newGame(){
         Random rand;
         rand = new Random();
-        for(int i = 0; i < 5; ++i){
+        for(int i = 0; i < 9; ++i){
             switchButtons((View)btn[rand.nextInt(9)]);
         }
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Yuriy/AndroidstudioProjects/GitHub/ChartBuilder/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Yuriy/AndroidstudioProjects/GitHub/Projects/ChartBuilder/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="color_entry">
         <item>black</item>
@@ -22,7 +22,7 @@
         <item>grey</item>
         <item>magenta</item>     
     </string-array>
-    <!-- From: file:/C:/Users/Yuriy/AndroidstudioProjects/GitHub/ChartBuilder/app/src/main/res/values/color.xml -->
+    <!-- From: file:/C:/Users/Yuriy/AndroidstudioProjects/GitHub/Projects/ChartBuilder/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <array name="colors">
         <item name="bright_pink">#FF007F</item>
@@ -38,7 +38,7 @@
 	    <item name="violet">#7F00FF</item>
 	    <item name="magenta">#FF00FF</item>        
     </array>
-    <!-- From: file:/C:/Users/Yuriy/AndroidstudioProjects/GitHub/ChartBuilder/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Yuriy/AndroidstudioProjects/GitHub/Projects/ChartBuilder/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="ls_entry">
         <item>small</item>
@@ -66,11 +66,11 @@
         <item>4</item>
         <item>5</item>
     </string-array>
-    <!-- From: file:/C:/Users/Yuriy/AndroidstudioProjects/GitHub/ChartBuilder/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/Yuriy/AndroidstudioProjects/GitHub/Projects/ChartBuilder/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/C:/Users/Yuriy/AndroidstudioProjects/GitHub/ChartBuilder/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Yuriy/AndroidstudioProjects/GitHub/Projects/ChartBuilder/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="add_point">Add</string>
     <string name="app_name">Least squares</string>
@@ -81,7 +81,7 @@
     <string name="menu_item_settings">Settings</string>
     <string name="x_value">X value</string>
     <string name="y_value">Y value</string>
-    <!-- From: file:/C:/Users/Yuriy/AndroidstudioProjects/GitHub/ChartBuilder/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Yuriy/AndroidstudioProjects/GitHub/Projects/ChartBuilder/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
